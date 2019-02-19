@@ -1,0 +1,43 @@
+package Problemas_ordenamiento;
+
+import javax.swing.*;
+
+public class main
+{
+
+	public static void main(String[] args) 
+	{
+		int n;
+		n = Integer.parseInt(JOptionPane.showInputDialog(null, "Número de elementos: "));
+		
+		//DECLARACION DE LOS ARREGLOS
+		int s[], ordenada[];
+		s = new int[n]; 
+		ordenada = new int[n];
+		
+		//Lleenado de la matriz
+		for(int i=0; i<n; i++)
+		{
+			s[i] = Integer.parseInt(JOptionPane.showInputDialog(null, "Elemento 1: "));
+		}
+		
+		ordena ord = new ordena(s, n);     /*ATENCION:
+                                           Cuando uno de los parametros a pasar es un arreglo se 
+                                           pasa UNICAMENTE la variable de dicho arreglo sin los corchetes */
+		
+		//PASE DE LA LISTA Y EL NUMERO DE ELEMENTOS
+		
+		                                             
+		ordenada = ord.selection_sort();      	
+		
+		//IMPRESION DEL ARREGLO ORDENADO
+		System.out.println("Arreglo ordenado:");
+		System.out.println("\n");
+		for(int i=0; i<n; i++)
+		{
+			System.out.println(ordenada[i] + " ");
+		}
+		
+	}
+	
+}
