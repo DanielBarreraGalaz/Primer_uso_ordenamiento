@@ -1,0 +1,43 @@
+package Problemas_ordenamiento;
+
+public class ordena 
+{
+	private int s[];
+	private int n;
+	
+	public ordena(int s[], int n)
+	{
+		this.n = n;
+		this.s = s;
+	}
+    
+    
+	public int[] selection_sort()
+	{
+		int i, j, aux;
+		int min;   ///INDICE DEL MINIMO
+		
+		for(i=0; i<n; i++)
+		{
+			min = i;
+			
+			for(j=i+1; j<n; j++)
+			{
+				if(s[j] < s[min])
+				{
+					min = j;
+				}	
+			}
+			
+			/*INTERCAMBIO*/
+			aux = s[i];
+			s[i] = s[min];
+			s[min] = aux;
+			
+		}//fin for i
+		return s;  //Cuando se regresa un arreglo se hace sin los corchetes
+		
+	}//fin GETTER/SETTER selection_sort
+	
+
+}//fin ordena
